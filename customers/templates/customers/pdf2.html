@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+PDf
+{% endblock title %}
+
+{% block content %}
+
+<div class="container text-center">
+     
+    
+     <h1>Customer {{ customer.id }}</h1> <hr>
+     <h3>Customer Name:  {{ customer.name }}</h3>
+     <h3>Customer Desctiption:  {{ customer.description }}</h3>
+     <h3>Customer Image:  </h3>
+     {{ customer.logo }} <br>
+     {{ customer.logo.url }} <br>
+     {{ customer.logo.path }} <br>
+
+    
+     <img src="media/{{ customer.logo }}" alt="" height="500px" style="object-fit: cover;">
+     
+</div>
+
+{% endblock content %}
